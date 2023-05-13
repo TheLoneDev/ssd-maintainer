@@ -18,8 +18,9 @@ int main()
     
     DiskManager diskMgr;
     diskMgr.ScanBlockDevices();
+    std::size_t numDisks = diskMgr.GetNumDevices();
 
-    if(!diskMgr.HasDevices())
+    if(numDisks == 0)
     {
         std::cerr << "Could not detect any block devices." << std::endl; // Probably permission issue, 
                                                                          // since Linux must have at least 1 block device, right? ᕦ(⩾﹏⩽)ᕥ
@@ -27,7 +28,7 @@ int main()
     }
 
     std::cout << "Choose which disk to fully read:\n";
-    std::size_t numDisks = diskMgr.GetNumDevices(); // Just to make sure GetNumDevices() is not called everytime
+
     for(std::size_t i = 0; i < numDisks; i++)
     {
         auto& disk = diskMgr.GetDisk(i);
