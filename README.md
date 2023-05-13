@@ -23,6 +23,10 @@ make -C build -j 32   (replace 32 with number of logical cores)
 
 After that the binary will be compiled in the bin directory
 
+## Download precompiled
+
+[Download Linux x64](https://github.com/TheLoneDev/ssd-maintainer/releases/download/1/ssd-maintainer)
+
 ## Usage
 
 Just follow the instructions given in console, make sure to run as root or have full permissions to read the block device.
