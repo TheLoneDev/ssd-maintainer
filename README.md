@@ -26,3 +26,5 @@ After that the binary will be compiled in the bin directory
 ## Usage
 
 Just follow the instructions given in console, make sure to run as root or have full permissions to read the block device.
+
+![Example Image](https://i.imgur.com/xureaL2.png)
